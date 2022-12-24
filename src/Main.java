@@ -15,7 +15,26 @@ public class Main {
         card.setPin(input.nextInt());
 
         // Display menu
+        while (true){
+            card.AksesMasuk();
+            int decision = input.nextInt();
+            switch (decision) {
+                case 1:
+                    System.out.println(" Saldo anda adalah Rp." + card.getSaldo());
+                    System.out.println("-----------------------------------------");
+                    break;
+                case 2 :
+                    do {
 
+                    } while (decision != 2);
+                    break;
+                case 3 :
+                    do{
+
+                    } while (decision != 2);
+                    break;
+            }
+        }
 
 
     }
