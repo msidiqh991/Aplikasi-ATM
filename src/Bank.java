@@ -22,6 +22,7 @@ public class Bank implements OperatingSystem {
     public double withdrawalCash() {
         return 0;
     }
+
     @Override
     public int JumlahPenarikanUang() {
         return 0;
