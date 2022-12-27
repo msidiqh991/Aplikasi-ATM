@@ -1,5 +1,8 @@
 public class Bank implements OperatingSystem {
-    private double NoRekNasabah, NoRekTujuan;
+    protected double NoRekNasabah, NoRekTujuan;
+    protected int temp = 0, temp2 = 0;
+    protected int jmlAmbil, isi;
+    int[] tambahSaldo = new int[20], tarikDana = new int[20];
 
     public double getNoRekNasabah() {
         return NoRekNasabah;
@@ -16,7 +19,7 @@ public class Bank implements OperatingSystem {
     }
 
     @Override
-    public double JumlahTransfer() {
+    public double withdrawalCash() {
         return 0;
     }
     @Override

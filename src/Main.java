@@ -36,9 +36,13 @@ public class Main {
                         System.out.println(" ----------------------------------------");
                         break;
                     case 2:
-                        do {
-
-                        } while (decision2 != 2);
+                        System.out.println("\n ======================================");
+                        System.out.println(" Masukkan No.rekening : ");
+                        bx.setNoRekNasabah(input.nextDouble());
+                        System.out.println(" Masukan Nominal Uang Yang Ingin diambil -- ");
+                        System.out.print(" Rp. ");
+                        bx.jmlAmbil = input.nextInt();
+                        card.withdrawalCash();
                         break;
                     case 3:
                         do {
