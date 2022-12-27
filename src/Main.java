@@ -39,7 +39,7 @@ public class Main {
                         System.out.println("\n ======================================");
                         System.out.println(" Masukkan No.rekening : ");
                         bx.setNoRekNasabah(input.nextDouble());
-                        System.out.println(" Masukan Nominal Uang Yang Ingin diambil -- ");
+                        System.out.println(" Masukan Nominal Uang Yang Ingin diambil - ");
                         System.out.print(" Rp. ");
                         bx.jmlAmbil = input.nextInt();
                         card.withdrawalCash();
