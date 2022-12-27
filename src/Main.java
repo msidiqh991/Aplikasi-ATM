@@ -36,23 +36,7 @@ public class Main {
                         System.out.println(" ---------------------------------");
                         break;
                     case 2:
-                        System.out.println(" Masukkan No.rekening : ");
-                        bx.setNoRekNasabah(input.nextDouble());
-                        System.out.println(" Masukan Nominal Uang Yang Ingin diambil - ");
-                        System.out.print(" Rp. ");
-                        bx.jmlAmbil = input.nextInt();
-                        // Pengolahan
-                        bx.tarikDana[bx.temp2] = bx.jmlAmbil;
-                        bx.temp2++;
-                        bx.isi = card.Saldo;
-                        bx.isi -= bx.jmlAmbil;
-                        if (bx.isi <= 50000) {
-                            System.out.println("Saldo Minimal Rp.50000");
-                        } else {
-                            card.Saldo -= bx.jmlAmbil;
-                            System.out.println("Saldo Anda adalah Rp. " + card.Saldo);
-                        }
-                        System.out.println("=======================================");
+                        bx.withdrawalCash();
                         break;
                     case 3:
                         do {

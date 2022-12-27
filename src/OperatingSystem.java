@@ -1,4 +1,4 @@
 public interface OperatingSystem {
-    double withdrawalCash();
+    void withdrawalCash();
     int JumlahPenarikanUang();
 }
