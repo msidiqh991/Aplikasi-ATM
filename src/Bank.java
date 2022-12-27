@@ -23,15 +23,4 @@ public class Bank implements OperatingSystem {
     public int JumlahPenarikanUang() {
         return 0;
     }
-
-    @Override
-    public void Bankmenu() {
-        System.out.println("-------= MENU ATM =-------");
-        System.out.println(" [1] Cek Saldo ");
-        System.out.println(" [2] Tarik Uang ");
-        System.out.println(" [3] Transfer ");
-        System.out.println(" [4] Exit ");
-        System.out.println("--------------------------");
-        System.out.println("Pilihanmu --> ");
-    }
 }

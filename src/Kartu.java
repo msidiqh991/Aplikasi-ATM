@@ -1,16 +1,7 @@
 public class Kartu extends Bank {
-    public String NamaPengguna = "Muhammad Sidiq";
-    public int pin;
-    protected int AccesKey = 140803;
+    public String NamaPengguna;
+    public int password;
     int TabunganAwal = 500000;
-
-    public void AksesMasuk(){
-        if(pin == AccesKey){
-            Bankmenu();
-        } else {
-            System.out.println("Terdapat kesalahan, Silahkan mengulangi!");
-        }
-    }
 
     public int getSaldo() {
         return TabunganAwal;
@@ -19,11 +10,14 @@ public class Kartu extends Bank {
     public String getNamaPengguna() {
         return NamaPengguna;
     }
-
-    public int getPin() {
-        return pin;
+    public void setNamaPengguna(String namaPengguna) {
+        NamaPengguna = namaPengguna;
     }
-    public void setPin(int pin) {
-        this.pin = pin;
+
+    public int getPassword() {
+        return password;
+    }
+    public void setPassword(int password) {
+        this.password = password;
     }
 }
