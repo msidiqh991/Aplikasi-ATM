@@ -15,4 +15,4 @@ This project is an application that implements the operation of an ATM within th
 <br>
 _References get in [Documentation](https://www.w3schools.com/java/java_ref_keywords.asp)_
 
-#### Object Oriented Programming (Pemrograman Berbasis Objek) Project
+#### Object Oriented Programming (Pemrograman Berorientasi Objek) Project
