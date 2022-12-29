@@ -1,11 +1,11 @@
 import java.util.Scanner;
-
 public class Bank implements OperatingSystem {
     protected double NoRekNasabah, NoRekTujuan;
     protected int temp = 0, temp2 = 0;
     protected int jmlAmbil, isi;
     int[] tambahSaldo = new int[20], tarikDana = new int[20];
-
+    Scanner in = new Scanner(System.in);
+    Kartu x = new Kartu();
 
     public double getNoRekNasabah() {
         return NoRekNasabah;
@@ -23,15 +23,12 @@ public class Bank implements OperatingSystem {
 
     @Override
     public void withdrawalCash() {
-        Scanner in = new Scanner(System.in);
-        Kartu x = new Kartu();
-
         System.out.println(" Masukkan No.rekening : ");
         setNoRekNasabah(in.nextDouble());
         System.out.println(" Masukan Nominal Uang Yang Ingin diambil - ");
         System.out.print(" Rp. ");
         jmlAmbil = in.nextInt();
-        // Pengolahan
+        // Process
         tarikDana[temp2] = jmlAmbil;
         temp2++;
         isi = x.Saldo;
@@ -46,7 +43,30 @@ public class Bank implements OperatingSystem {
     }
 
     @Override
-    public int JumlahPenarikanUang() {
+    public void TransferCash() {
+        System.out.println(" Masukkan No.rekening Nasabah : ");
+        setNoRekNasabah(in.nextDouble());
+        System.out.println(" Masukkan No.rekening Tujuan : ");
+        setNoRekTujuan(in.nextDouble());
+        System.out.println(" Masukan Nominal yang ingin ditransfer - ");
+        System.out.print(" Rp. ");
+        jmlAmbil = in.nextInt();
+        // Process
+        tarikDana[temp2] = jmlAmbil;
+        temp2++;
+        isi = x.Saldo;
+        isi -= jmlAmbil;
+        if (isi <= 50000) {
+            System.out.println("Saldo Minimal Rp.50000");
+        } else {
+            x.Saldo -= jmlAmbil;
+            System.out.println("Saldo Anda adalah Rp. " + x.Saldo);
+        }
+        System.out.println("===================================");
+    }
+
+    @Override
+    public int IncomeCash() {
         return 0;
     }
 }

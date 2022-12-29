@@ -39,9 +39,7 @@ public class Main {
                         bx.withdrawalCash();
                         break;
                     case 3:
-                        do {
-
-                        } while (decision2 != 2);
+                        bx.TransferCash();
                         break;
                     case 4:
 
