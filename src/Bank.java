@@ -4,8 +4,6 @@ public class Bank implements OperatingSystem {
     protected int temp = 0, temp2 = 0;
     protected int jmlAmbil, isi;
     int[] tambahSaldo = new int[20], tarikDana = new int[20];
-    Scanner in = new Scanner(System.in);
-    Kartu x = new Kartu();
 
     public double getNoRekNasabah() {
         return NoRekNasabah;
@@ -23,6 +21,9 @@ public class Bank implements OperatingSystem {
 
     @Override
     public void withdrawalCash() {
+        Scanner in = new Scanner(System.in);
+        Kartu x = new Kartu();
+
         System.out.println(" Masukkan No.rekening : ");
         setNoRekNasabah(in.nextDouble());
         System.out.println(" Masukan Nominal Uang Yang Ingin diambil - ");
@@ -44,6 +45,9 @@ public class Bank implements OperatingSystem {
 
     @Override
     public void TransferCash() {
+        Scanner in = new Scanner(System.in);
+        Kartu x = new Kartu();
+
         System.out.println(" Masukkan No.rekening Nasabah : ");
         setNoRekNasabah(in.nextDouble());
         System.out.println(" Masukkan No.rekening Tujuan : ");
@@ -67,6 +71,9 @@ public class Bank implements OperatingSystem {
 
     @Override
     public void IncomeCash() {
+        Scanner in = new Scanner(System.in);
+        Kartu x = new Kartu();
+
         System.out.println(" Masukkan No.rekening Nasabah : ");
         setNoRekNasabah(in.nextDouble());
         System.out.println(" Masukkan Nominal yang ingin ditambahkan - ");

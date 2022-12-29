@@ -46,7 +46,7 @@ public class Main {
                         bx.IncomeCash();
                         break;
                     case 5:
-
+                        exit(1);
                         break;
                     default:
                         break;
