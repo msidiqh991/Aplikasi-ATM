@@ -33,8 +33,7 @@ public class Main {
                 int decision2 = input.nextInt();
                 switch (decision2) {
                     case 1:
-                        System.out.println("\n Saldo anda adalah Rp." + card.getSaldo());
-                        System.out.println(" ---------------------------------");
+                       bx.getUpdatedSaldo();
                         break;
                     case 2:
                         bx.withdrawalCash();
@@ -47,8 +46,6 @@ public class Main {
                         break;
                     case 5:
                         exit(1);
-                        break;
-                    default:
                         break;
                     }
                 } else {

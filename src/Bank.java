@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class Bank implements OperatingSystem {
     protected double NoRekNasabah, NoRekTujuan;
     protected int temp = 0, temp2 = 0;
-    protected int jmlAmbil, isi;
+    protected int jmlAmbil, isi, updatedSaldo;
     int[] tambahSaldo = new int[20], tarikDana = new int[20];
 
     public double getNoRekNasabah() {
@@ -19,12 +19,19 @@ public class Bank implements OperatingSystem {
         NoRekTujuan = noRekTujuan;
     }
 
+    public void getUpdatedSaldo() {
+        Kartu x = new Kartu();
+        x.Saldo += jmlAmbil;
+        System.out.println("\n Saldo anda adalah Rp." + x.Saldo);
+        System.out.println(" ---------------------------------");
+    }
+
     @Override
     public void withdrawalCash() {
         Scanner in = new Scanner(System.in);
         Kartu x = new Kartu();
 
-        System.out.println(" Masukkan No.rekening : ");
+        System.out.print(" Masukkan No.rekening : ");
         setNoRekNasabah(in.nextDouble());
         System.out.println(" Masukan Nominal Uang Yang Ingin diambil - ");
         System.out.print(" Rp. ");
@@ -48,9 +55,9 @@ public class Bank implements OperatingSystem {
         Scanner in = new Scanner(System.in);
         Kartu x = new Kartu();
 
-        System.out.println(" Masukkan No.rekening Nasabah : ");
+        System.out.print(" Masukkan No.rekening Nasabah : ");
         setNoRekNasabah(in.nextDouble());
-        System.out.println(" Masukkan No.rekening Tujuan : ");
+        System.out.print(" Masukkan No.rekening Tujuan : ");
         setNoRekTujuan(in.nextDouble());
         System.out.println(" Masukan Nominal yang ingin ditransfer - ");
         System.out.print(" Rp. ");
@@ -74,7 +81,7 @@ public class Bank implements OperatingSystem {
         Scanner in = new Scanner(System.in);
         Kartu x = new Kartu();
 
-        System.out.println(" Masukkan No.rekening Nasabah : ");
+        System.out.print(" Masukkan No.rekening Nasabah : ");
         setNoRekNasabah(in.nextDouble());
         System.out.println(" Masukkan Nominal yang ingin ditambahkan - ");
         System.out.print(" Rp. ");
