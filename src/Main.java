@@ -25,7 +25,8 @@ public class Main {
                 System.out.println(" [1] Cek Saldo ");
                 System.out.println(" [2] Tarik Uang ");
                 System.out.println(" [3] Transfer ");
-                System.out.println(" [4] Exit ");
+                System.out.println(" [4] Top-up ");
+                System.out.println(" [5] Exit ");
                 System.out.println("--------------------------");
                 System.out.print("Pilihanmu --> ");
 
@@ -42,9 +43,11 @@ public class Main {
                         bx.TransferCash();
                         break;
                     case 4:
+                        bx.IncomeCash();
+                        break;
+                    case 5:
 
                         break;
-
                     default:
                         break;
                     }

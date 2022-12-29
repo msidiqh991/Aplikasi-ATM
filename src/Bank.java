@@ -66,7 +66,14 @@ public class Bank implements OperatingSystem {
     }
 
     @Override
-    public int IncomeCash() {
-        return 0;
+    public void IncomeCash() {
+        System.out.println(" Masukkan No.rekening Nasabah : ");
+        setNoRekNasabah(in.nextDouble());
+        System.out.println(" Masukkan Nominal yang ingin ditambahkan - ");
+        System.out.print(" Rp. ");
+        jmlAmbil = in.nextInt();
+        // Process
+        x.Saldo += jmlAmbil;
+        System.out.println(" Total saldo anda adalah Rp." + x.Saldo);
     }
 }
