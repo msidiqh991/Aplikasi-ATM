@@ -1,7 +1,5 @@
 import java.util.Scanner;
-
 import static java.lang.System.exit;
-
 public class Main {
     public static void main(String[] args) {
 
@@ -15,7 +13,6 @@ public class Main {
             System.out.print(" Masukkan username : ");
             card.setNamaPengguna(input.next());
             System.out.print(" Masukkan Password : ");
-            card.setPassword(input.nextInt());
 
         do {
             // Display menu

@@ -31,23 +31,27 @@ public class Bank implements OperatingSystem {
         Scanner in = new Scanner(System.in);
         Kartu x = new Kartu();
 
-        System.out.print(" Masukkan No.rekening : ");
-        setNoRekNasabah(in.nextDouble());
-        System.out.println(" Masukan Nominal Uang Yang Ingin diambil - ");
-        System.out.print(" Rp. ");
-        jmlAmbil = in.nextInt();
-        // Process
-        tarikDana[temp2] = jmlAmbil;
-        temp2++;
-        isi = x.Saldo;
-        isi -= jmlAmbil;
-        if (isi <= 50000) {
-            System.out.println("Saldo Minimal Rp.50000");
-        } else {
-            x.Saldo -= jmlAmbil;
-            System.out.println("Saldo Anda adalah Rp. " + x.Saldo);
+        try {
+            System.out.print(" Masukkan No.rekening : ");
+            setNoRekNasabah(in.nextDouble());
+            System.out.println(" Masukan Nominal Uang Yang Ingin diambil - ");
+            System.out.print(" Rp. ");
+            jmlAmbil = in.nextInt();
+            // Process
+            tarikDana[temp2] = jmlAmbil;
+            temp2++;
+            isi = x.Saldo;
+            isi -= jmlAmbil;
+            if (isi <= 50000) {
+                System.out.println("Saldo Minimal Rp.50000");
+            } else {
+                x.Saldo -= jmlAmbil;
+                System.out.println("Saldo Anda adalah Rp. " + x.Saldo);
+            }
+            System.out.println("===================================");
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-        System.out.println("===================================");
     }
 
     @Override
@@ -55,25 +59,29 @@ public class Bank implements OperatingSystem {
         Scanner in = new Scanner(System.in);
         Kartu x = new Kartu();
 
-        System.out.print(" Masukkan No.rekening Nasabah : ");
-        setNoRekNasabah(in.nextDouble());
-        System.out.print(" Masukkan No.rekening Tujuan : ");
-        setNoRekTujuan(in.nextDouble());
-        System.out.println(" Masukan Nominal yang ingin ditransfer - ");
-        System.out.print(" Rp. ");
-        jmlAmbil = in.nextInt();
-        // Process
-        tarikDana[temp2] = jmlAmbil;
-        temp2++;
-        isi = x.Saldo;
-        isi -= jmlAmbil;
-        if (isi <= 50000) {
-            System.out.println("Saldo Minimal Rp.50000");
-        } else {
-            x.Saldo -= jmlAmbil;
-            System.out.println("Saldo Anda adalah Rp. " + x.Saldo);
+        try {
+            System.out.print(" Masukkan No.rekening Nasabah : ");
+            setNoRekNasabah(in.nextDouble());
+            System.out.print(" Masukkan No.rekening Tujuan : ");
+            setNoRekTujuan(in.nextDouble());
+            System.out.println(" Masukan Nominal yang ingin ditransfer - ");
+            System.out.print(" Rp. ");
+            jmlAmbil = in.nextInt();
+            // Process
+            tarikDana[temp2] = jmlAmbil;
+            temp2++;
+            isi = x.Saldo;
+            isi -= jmlAmbil;
+            if (isi <= 50000) {
+                System.out.println("Saldo Minimal Rp.50000");
+            } else {
+                x.Saldo -= jmlAmbil;
+                System.out.println("Saldo Anda adalah Rp. " + x.Saldo);
+            }
+            System.out.println("===================================");
+        } catch(Exception o){
+            System.out.println(" Ada kesalahan pada input program, Silahkan mengulangi !");
         }
-        System.out.println("===================================");
     }
 
     @Override
@@ -81,13 +89,17 @@ public class Bank implements OperatingSystem {
         Scanner in = new Scanner(System.in);
         Kartu x = new Kartu();
 
-        System.out.print(" Masukkan No.rekening Nasabah : ");
-        setNoRekNasabah(in.nextDouble());
-        System.out.println(" Masukkan Nominal yang ingin ditambahkan - ");
-        System.out.print(" Rp. ");
-        jmlAmbil = in.nextInt();
-        // Process
-        x.Saldo += jmlAmbil;
-        System.out.println(" Total saldo anda adalah Rp." + x.Saldo);
+        try {
+            System.out.print(" Masukkan No.rekening Nasabah : ");
+            setNoRekNasabah(in.nextDouble());
+            System.out.println(" Masukkan Nominal yang ingin ditambahkan - ");
+            System.out.print(" Rp. ");
+            jmlAmbil = in.nextInt();
+            // Process
+            x.Saldo += jmlAmbil;
+            System.out.println(" Total saldo anda adalah Rp." + x.Saldo);
+        } catch (Exception o){
+            System.out.println(" Ada kesalahan pada input program, Silahkan mengulangi !");
+        }
     }
 }
